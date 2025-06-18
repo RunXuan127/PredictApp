@@ -1,16 +1,6 @@
 import os
-import sys
-import subprocess
 import streamlit as st
-
-# 检查并安装缺失的依赖
-try:
-    import joblib
-except ImportError:
-    st.warning("安装缺失的依赖...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "joblib"])
-    import joblib
-    
+import joblib
 import numpy as np
 import pandas as pd
 import shap
